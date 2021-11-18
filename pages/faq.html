@@ -10,6 +10,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,500;0,700;1,200;1,500;1,700&family=Oswald:wght@200;300;400&display=swap" rel="stylesheet">
     
+    
+    <!--CSS Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
     <!--Archivo CSS-->
     <link rel="stylesheet" href="../css/main.css">
     
@@ -22,109 +26,140 @@
 
     <div id='faq_grid'>
             
-        <!--Logo-->
-        <header class="logo secondary">
-            <a title="VICIO CLOTHING" href="../index.html"><img src="../public/img/vicio-log.png" alt="Logo VICIO CLOTHING"></a>
-        </header>
+        <header>
+            <!--Logo-->
+            <div class="logo secondary">
+            <a href="../index.html"><img src="../public/img/vicio-log.png" alt="Logo VICIO CLOTHING"></a>
+            </div>
 
-        <!--Encabezado-->
-        <header class="encabezado">
-            <h1>FAQ!</h1> 
-            <h2>Preguntas frecuentes</h2>
+            <!--Encabezado-->
+            <div class="encabezado">
+                <h1>FAQ</h1>
+                <h2>Preguntas frecuentes</h2>
+            </div>
         </header>
 
         <!--Navegador-->
-        <nav class="navegador">
-
-            <ul>
-                <li>
-                    <a href="../index.html">Inicio</a>
-                </li>
-
-                <li>
-                    <a href="qhacemos.html">Que hacemos</a>
-                </li>
-
-                <li>
-                    <a href="lamagia.html">La MAGIA</a>
-                </li>
-
-                <li>
-                    <a href="qsomos.html">Quienes somos</a>
-                </li>
-
-                <li>
-                    <a href="faq.html">Preguntas frecuentes</a>
-                </li>
-            </ul>
-
+        <nav class="navbar navbar-expand-xl navbar-dark rounded bg-dark bg-gradient">
+            <div class="container-fluid">
+                      
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDark" aria-controls="navbarDark" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse show" id="navbarDark">
+                <ul class="navbar-nav me-auto mb-2 mb-xl-0">
+                          
+                    <li class="nav-item">
+                        <a button type="button" class="btn btn-outline-light mx-2" href="../index.html">Inicio</a>
+                    </li>
+        
+                    <li class="nav-item">
+                        <a button type="button" class="btn btn-outline-light mx-2" href="qhacemos.html">Que hacemos</a>
+                    </li>
+        
+                    <li class="nav-item">
+                        <a button type="button" class="btn btn-outline-light mx-2" href="lamagia.html">La MAGIA</a>
+                    </li>
+        
+                    <li class="nav-item">
+                        <a button type="button" class="btn btn-outline-light mx-2" href="qsomos.html">Quienes somos</a>
+                    </li>
+        
+                    <li class="nav-item">
+                        <a button type="button" class="btn btn-outline-light mx-2" href="faq.html">Preguntas frecuentes</a>
+                    </li>
+        
+                            
+                </ul>
+                        
+                </div>
+            </div>
         </nav>
 
         <!--Bloque principal de Preguntas frecuentes-->
         <main class="preguntas_frecuentes">
 
-            <!--Pregunta 1-->
-            <h3 class="pregunta">¿Como sé que talle elegir?</h3>
-                <p class="respuesta">Nunca fue tan facil pedir remeras por internet! Aca te dejamos una tabla de talle que no falla para que puedas elegir tu talle. Tranqui, de verdad no falla</p>
 
-            <table class="talles">
-                <tr>
-                    <th scope="row">Talle</th>
-                    <th>S</th>
-                    <th>M</th>
-                    <th>L</th>
-                </tr>
+            <div class="accordion" id="accordionExample">
+                <!--Pregunta 1-->
+                <div class="accordion-item rounded bg-dark bg-gradient text-light">
+                    <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button rounded bg-dark bg-gradient text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        ¿Como sé que talle elegir?
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p class="respuesta">Nunca fue tan facil pedir remeras por internet! Aca te dejamos una tabla de talle que no falla para que puedas elegir tu talle. Tranqui, de verdad no falla</p>
 
-                <tr>
-                    <th>Pecho</th>
-                    <td>51cm</td>
-                    <td>52cm</td>
-                    <td>54cm</td>
-                </tr>
+                        <table class="talles">
+                            <tr>
+                                <th scope="row">Talle</th>
+                                <th>S</th>
+                                <th>M</th>
+                                <th>L</th>
+                            </tr>
+            
+                            <tr>
+                                <th>Pecho</th>
+                                <td>51cm</td>
+                                <td>52cm</td>
+                                <td>54cm</td>
+                            </tr>
+            
+                            <tr>
+                                <th>Alto</th>
+                                <td>71cm</td>
+                                <td>73cm</td>
+                                <td>74cm</td>
+                            </tr>
+                        </table>
+                  </div>
+                </div>
 
-                <tr>
-                    <th>Alto</th>
-                    <td>71cm</td>
-                    <td>73cm</td>
-                    <td>74cm</td>
-                </tr>
+                <!--Pregunta 2-->
+                <div class="accordion-item rounded bg-dark bg-gradient text-light">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed bg-dark bg-gradient text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      ¿De que material estan hechas las remeras?
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul class="respuesta">
+                            <li>100% Algodón peinado 24/1</li>
+                            <li>Costuras resistentes</li>
+                            <li>Tirillera (para que no pique el cuello)</li>
+                            <li>Colores intensos resistentes a los lavados</li>
+                            <li>La tela para la confeccion es entregada por el Lobo del Aire</li>
+                        </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-            </table>
-
-            <!--Pregunta 2-->
-            <h3 class="pregunta">¿De que material estan hechas las remeras?</h3>
-                <ul class="respuesta">
-                    <li>100% Algodón peinado 24/1</li>
-                    <li>Costuras resistentes</li>
-                    <li>Tirillera (para que no pique el cuello)</li>
-                    <li>Colores intensos resistentes a los lavados</li>
-                    <li>La tela para la confeccion es entregada por el Lobo del Aire</li>
-                </ul>
         </main>
 
-        <!--Redes sociales-->
-        <footer class="redes_sociales">
+        <footer>
+            <!--Redes sociales-->
+            <div class="redes_sociales">
+                <a href="https://www.instagram.com/?hl=es" target="blank"><img src="../public/img/instagram_icon.png" alt="Instagram" /></a></h1>
+                <a a href="https://www.facebook.com/" target="blank"><img src="../public/img/facebook_icon.png" alt="facebook"></a>
+                <a href="https://www.gmail.com/" target="blank"><img src="../public/img/mail_icon.png" alt="Email">
+            </div>
 
-            <ul>
-                <li>
-                    <a href="https://www.instagram.com/?hl=es" target="blank"><img src="../public/img/1856379_circled_instagram_media_network_social_icon.png" alt="Instagram" /></a>
-                </li>
-
-                <li>
-                    <a a href="https://www.facebook.com/" target="blank"><img src="../public/img/107175_circle_facebook_icon.png" alt="facebook"></a>
-                </li>
-
-                <li>
-                    <a href="https://www.gmail.com/" target="blank"><img src="../public/img/1891029_cercle_email_envelope_letter_mail_icon.png" alt="Email"></a>
-                </li>
-            </ul>
+            <!--Pie de pagina-->
+            <div class="copy py-2">
+                <a href="www.mrthreepwood.com" target="blank">&#169; 2021 Mr.Threepwood</a>
+            </div>
 
         </footer>
-
-        <!--Pie de pagina-->
-        <footer class="copy">&#169; 2021 Mr.Threepwood</footer>
     
     </div>
+
+    <!--Js Scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 
 </body>
 

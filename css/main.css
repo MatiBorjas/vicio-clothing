@@ -10,6 +10,10 @@ font-family: 'Oswald', sans-serif;*/
     padding: 0px;
 }
 
+.row{
+    padding: 0px;
+}
+
 /*============*/
 /* body reset */
 /*============*/
@@ -19,14 +23,18 @@ body{
     background-color: rgb(197, 197, 197);
     margin: 0px;
     padding: 0px;
+    
 }
 
 /*============*/
 /*   GENERAL  */
 /*============*/
 
-.logo{
+header{
     grid-area: head;
+}
+
+.logo{
     display:flex;
     flex-flow: row nowrap;
     justify-content: center;
@@ -35,7 +43,6 @@ body{
     animation-name: vicioc;
     animation-duration: .5s;
     animation-timing-function:linear;
-    /*animation-delay: .2s;*/
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     position: relative;
@@ -55,7 +62,6 @@ body{
 }
 
 .encabezado{
-    grid-area: titulo;
     text-align: center;
 }
 
@@ -63,13 +69,6 @@ h1{
     font-family: 'Oswald', sans-serif;
     font-size: 50px;
     margin: 0px;
-    /*padding-top: 10px;*/
-}
-
-@media (max-width: 768px){
-    h1{
-        font-size: 30px;
-    }
 }
 
 h2{
@@ -77,12 +76,6 @@ h2{
     color:rgb(102, 102, 102);
     margin-top: 0px;
     margin-bottom: 15px;
-}
-
-@media (max-width: 768px){
-    h2{
-        font-size: 25px;
-    }
 }
 
 h3{
@@ -93,182 +86,83 @@ h3{
     margin: 0px;
 }
 
-.navegador{
+nav{
     grid-area: nav;
-    background-color: rgba(150, 150, 150, 0.234);
+}
+
+footer{
+    grid-area: foot;
     width: 100%;
-    text-align: center;
-}
-
-@media (max-width: 768px){
-    .navegador{
-        text-align: left;
-    }
-}
-
-.navegador ul{
-    list-style-type: none;
-    margin-top: 0px;
-    padding-top: 10px;
-    margin-bottom: 10px;
-}
-
-.navegador ul li{
-    background-color: rgb(220, 220, 220);
-    color: black;
-    display: inline-block;
-    padding: 10px;
-    margin: 3px;
-    transition: all 0.3s ease-in-out;
-}
-
-@media (max-width: 768px){
-    .navegador ul li{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-    }
-}
-
-.navegador ul li:hover{
-    background-color: black;
-    color: rgb(220, 220, 220);
-    transform: scale(1.5,1.5);
-    margin: 0px 35px;
-}
-
-.navegador ul li a:link{
-    text-decoration: none;
-    color: black;
-}
-
-.navegador ul li a:link:hover{
-    text-decoration: none;
-    color: rgb(220, 220, 220);
-}
-
-.navegador ul li a:visited{
-    text-decoration: none;
-    color: black;
-}
-
-.navegador ul li a:visited:hover{
-    text-decoration: none;
-    color: rgb(220, 220, 220);
 }
 
 .redes_sociales{
-    grid-area: foot;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
     width: 100%;
-    background-color: rgb(150, 150, 150);
+    background-color: rgba(150, 150, 150, 0.486) ;
     text-align: center;
     margin-top: 30px;
-}
-
-.redes_sociales ul{
-    list-style-type: none;
-    margin-top: 0px;
-    margin-bottom: 10px;
-    margin-bottom: 0px;
-    padding-top: 5px;
+    padding: 30px 0px;
 }
 
 .redes_sociales img{
-    width: 35px;
-}
-
-.redes_sociales ul li{
-    display: inline-block;
-    color: rgb(220, 220, 220);
-    text-decoration-style: none;
-    margin-left: 20px;
-}
-
-.redes_sociales ul li a:link{
-    text-decoration: none;
-    color: rgb(220, 220, 220);
-}
-
-.redes_sociales ul li a:visited{
-    text-decoration: none;
-    color: rgb(220, 220, 220);
+    margin: 0px 15px;
 }
 
 .copy{
-    grid-area: copy;
     width: 100%;
-    background-color: rgb(14, 14, 84);
-    color: rgb(182, 228, 247);
-    text-align: end;
-    background-image: url(../public/img/fondo_copyright.jpg);
-    background-position-x: -100px;
-    padding-top: 0px;
-    padding-bottom: 0px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(197, 197, 197);
+    text-align: center;
+    margin-top: 100px;
 }
+
+.copy a:link{
+    text-decoration: none;
+    color: rgb(197, 197, 197);
+}
+
 
 /*============*/
 /*   INDEX    */
 /*============*/
 
-#index_grid{
+/*#index_grid{
     display: grid;
     grid-template-areas: 'head head head'
-                         'titulo titulo titulo'
                          'nav nav nav'
-                         'main main main'
+                         '. prod .'
                          '. text .'
-                         'foot foot foot'
-                         'copy copy copy';
+                         'foot foot foot';
     grid-template-columns: 25% 50% 25%;
     row-gap: 5px;
     justify-items: center;
 }
+*/
 
-@media (max-width: 768px){
-    #index_grid{
-        display: grid;
-        grid-template-areas: 'head head'
-                             'titulo titulo'
-                             'nav main'
-                             'text text'
-                             'foot foot'
-                             'copy copy';
-        grid-template-columns: 50% 50%;
-        row-gap: 5px;
-        justify-items: center;
-    }
+main{
+    grid-area: prod;
+
 }
 
-.inicio_remeras{
+/*.inicio_remeras{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-
-    grid-area: main;
     margin-top: 15px;
+    justify-content: space-between;
 }
+*/
 
-@media (max-width: 768px){
-    .inicio_remeras{
-        flex-direction: column;
-        align-items: center;
-        gap: 5px 0px;
-    }
-}
+/*.inicio_remeras img */
 
-.inicio_remeras img{
+.rem1{
     border: 4px solid rgb(34, 34, 34);
-    width: 300px;
-    margin: 0px 30px;
+    /*width: 300px;*/
+    /*margin: 0px 30px;*/
     transition: all 0.3s ease-in-out;
-}
-
-@media (max-width: 768px){
-    .inicio_remeras img{
-        border: 2px solid rgb(34, 34, 34);
-        width: 200px;
-        margin: 0px 5px;
-    }
 }
 
 .rem1:hover{
@@ -283,14 +177,8 @@ h3{
     font-size: 30px;
     font-weight: 600;
     text-align: center;
-    padding: 5px;
-    margin: 30px 0px;
-}
-
-@media (max-width: 768px){
-    .inicio_descripcion{
-        font-size: 20px;
-    }
+    padding: 20px;
+    margin: 40px 0px;
 }
 
 /*=========================*/
@@ -300,12 +188,10 @@ h3{
 #quehacemos_grid{
     display: grid;
     grid-template-areas: 'head head head'
-                         'titulo titulo titulo'
                          'nav nav nav'
                          'remes remes remes'
                          'img1 des img2'
-                         'foot foot foot'
-                         'copy copy copy';
+                         'foot foot foot';
     grid-template-columns: 35% 30% 35%;
     row-gap: 5px;
     justify-items: center;
@@ -320,7 +206,7 @@ h3{
     border: 4px solid rgb(34, 34, 34);
     display: inline-block;
     width: 250px;
-    margin: 30px 10px;
+    margin: 0px 10px;
     transition: all 0.3s ease-in-out;
 }
 
@@ -342,7 +228,6 @@ h3{
     font-size: 18px;
     text-align: justify;
     padding: 10px;
-    
 }
 
 .quehacemos_imagen2{
@@ -363,31 +248,32 @@ h3{
 #lamagia_grid{
     display: grid;
     grid-template-areas: 'head head head'
-                         'titulo titulo titulo'
                          'nav nav nav'
-                         '. text .'
-                         'ecu ecu ecu'
-                         'res res res'
-                         'foot foot foot'
-                         'copy copy copy';
+                         '. prod .'
+                         'foot foot foot';
     grid-template-columns: 20% 60% 20%;
     row-gap: 5px;
     justify-items: center;
 }
 
 .lamagia_texto{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     background-color: black;
     color:rgb(220, 220, 220);
     border-radius: 3px;
     padding: 10px;
-    grid-area: text;
     text-align: justify;
     font-size: 20px;
     margin-top: 15px;
 }
 
 .lamagia_ecuacion{
-    grid-area: ecu;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     font-family: 'Oswald', sans-serif;
     font-size: 40px;
     font-weight: 900;
@@ -422,31 +308,32 @@ h3{
 
 #qsomos_grid{
     display: grid;
-    grid-template-areas: 'head head head head'
-                         'titulo titulo titulo titulo'
-                         'nav nav nav nav'
-                         '. designer designer1 .'
-                         '. quality1 quality .'
-                         '. production production1 .'
-                         'foot foot foot foot'
-                         'copy copy copy copy';
-    grid-template-columns: 20% 30% 30% 20%;
+    grid-template-areas: 'head head head'
+                         'nav nav nav'
+                         '. prod .'
+                         'foot foot foot';
+    grid-template-columns: 20% 60% 20%;
     row-gap: 5px;
     justify-items: center;
 }
 
-.qsomos_designer{
-    grid-area: designer;
+#qsomos_carousel{
+    grid-area: prod;
+}
+
+/*.qsomos_designer{
     justify-self: end;
     padding-right: 40px;
     margin-top: 15px;
 }
+*/
 
 .qsomos_designer img{
     border: 3px solid rgb(41, 41, 41);
     width: 300px;
 }
 
+/*
 .qsomos_designer_texto{
     grid-area: designer1;
     text-align: justify;
@@ -459,12 +346,14 @@ h3{
     padding-top: 45px;
     margin-left: 40px;
 }
+*/
 
 .qsomos_quality img{
     border: 3px solid rgb(41, 41, 41);
     width: 300px;
 }
 
+/*
 .qsomos_quality_texto{
     grid-area: quality1;
     text-align: right;
@@ -480,17 +369,23 @@ h3{
     padding-top: 45px;
     margin-right: 40px;
 }
+*/
 
 .qsomos_production img{
     border: 3px solid rgb(41, 41, 41);
     width: 300px;
 }
 
+/*
 .qsomos_production_texto{
     grid-area: production1;
     text-align: justify;
     font-size: 20px;
     padding-top: 45px;
+}*/
+
+#qsomos_carousel{
+    margin: 15px 0px;
 }
 
 /*==============*/
@@ -500,22 +395,21 @@ h3{
 #faq_grid{
     display: grid;
     grid-template-areas: 'head head head'
-                         'titulo titulo titulo'
                          'nav nav nav'
-                         '. preg .'
-                         'foot foot foot'
-                         'copy copy copy';
+                         '. prod .'
+                         'foot foot foot';
     grid-template-columns: 20% 60% 20%;
     row-gap: 5px;
     justify-items: center;
 }
 
+
 .preguntas_frecuentes{
-    grid-area: preg;
     display: flex;
-    width: 600px;
+    width: 100%;
     flex-direction: column;
     justify-content: flex-start;
+    margin: 15px 0px;
 
 }
 
@@ -530,13 +424,16 @@ h3{
 .talles{
     margin-left: 10px;
     margin-top: 20px;
+    border-collapse:separate;
 }
 
 .talles tr th{
     background-color: rgb(67, 67, 67);
     color: rgb(197, 197, 197);
+    border: solid 2px rgb(155, 155, 155);
     font-size: 20px;
     font-weight: 600;
+    text-align: center;
     padding-left: 25px;
     padding-right: 25px;
     padding-top: 5px;

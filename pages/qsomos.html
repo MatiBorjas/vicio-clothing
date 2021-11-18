@@ -10,6 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,500;0,700;1,200;1,500;1,700&family=Oswald:wght@200;300;400&display=swap" rel="stylesheet">
     
+    <!--CSS Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
     <!--Archivo CSS-->
     <link rel="stylesheet" href="../css/main.css">
     
@@ -22,106 +25,130 @@
 
     <div id='qsomos_grid'>
             
-        <!--Logo-->
-        <header class="logo secondary">
-            <a title="VICIO CLOTHING" href="../index.html"><img src="../public/img/vicio-log.png" alt="Logo VICIO CLOTHING"></a>
-        </header>
+        <header>
+            <!--Logo-->
+            <div class="logo secondary">
+            <a href="../index.html"><img src="../public/img/vicio-log.png" alt="Logo VICIO CLOTHING"></a>
+            </div>
 
-        <!--Encabezado-->
-        <header class="encabezado">
-            <h1>Quienes somos</h1> 
-            <h2>La crew de VICIO CLOTHING</h2>
+            <!--Encabezado-->
+            <div class="encabezado">
+                <h1>QUIENES SOMOS</h1>
+                <h2>La crew de VICIO CLOTHING</h2>
+            </div>
         </header>
 
         <!--Navegador-->
-        <nav class="navegador">
-
-            <ul>
-                <li>
-                    <a href="../index.html">Inicio</a>
-                </li>
-
-                <li>
-                    <a href="qhacemos.html">Que hacemos</a>
-                </li>
-
-                <li>
-                    <a href="lamagia.html">La MAGIA</a>
-                </li>
-
-                <li>
-                    <a href="qsomos.html">Quienes somos</a>
-                </li>
-
-                <li>
-                    <a href="faq.html">Preguntas frecuentes</a>
-                </li>
-            </ul>
-
+        <nav class="navbar navbar-expand-xl navbar-dark rounded bg-dark bg-gradient">
+            <div class="container-fluid">
+                      
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDark" aria-controls="navbarDark" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse show" id="navbarDark">
+                <ul class="navbar-nav me-auto mb-2 mb-xl-0">
+                          
+                    <li class="nav-item">
+                        <a button type="button" class="btn btn-outline-light mx-2" href="../index.html">Inicio</a>
+                    </li>
+        
+                    <li class="nav-item">
+                        <a button type="button" class="btn btn-outline-light mx-2" href="qhacemos.html">Que hacemos</a>
+                    </li>
+        
+                    <li class="nav-item">
+                        <a button type="button" class="btn btn-outline-light mx-2" href="lamagia.html">La MAGIA</a>
+                    </li>
+        
+                    <li class="nav-item">
+                        <a button type="button" class="btn btn-outline-light mx-2" href="qsomos.html">Quienes somos</a>
+                    </li>
+        
+                    <li class="nav-item">
+                        <a button type="button" class="btn btn-outline-light mx-2" href="faq.html">Preguntas frecuentes</a>
+                    </li>
+        
+                            
+                </ul>
+                        
+                </div>
+            </div>
         </nav>
 
-        <!--Diseñador-->
-        <main class="qsomos_designer">
-            <img src="../public/img/designer.jpg" alt="Nuestro DISEÑADOR">
+        <main>
+
+            <div id="qsomos_carousel" class="carousel slide" data-bs-ride="carousel">
+    
+                    <div class="carousel-inner">
+                        
+                        <!--Diseñador-->
+                        <div class="carousel-item active bg-dark bg-gradient text-light" data-bs-interval="5000">
+                            <div class="d-inline-flex">
+                                <div class="qsomos_designer rounded">
+                                    <img src="../public/img/designer.jpg" alt="Nuestro DISEÑADOR">
+                                </div>
+
+                                <div class="qsomos_designer_texto">
+                                    <h3>Nuestro DISEÑADOR</h3>
+                                    <p class="ps-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur maxime inventore exercitationem ipsa qui ut veniam voluptatibus quia architecto non!</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Calidad-->
+                        <div class="carousel-item bg-dark bg-gradient text-light" data-bs-interval="5000">
+                            <div class="d-inline-flex">
+                                <div class="qsomos_quality">
+                                    <img src="../public/img/thinker.jpg" alt="Supervisor de CALIDAD">
+                                </div>
+
+                                <div class="qsomos_quality_texto">
+                                    <h3>Supervisor de CALIDAD</h3>
+                                    <p class="ps-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur maxime inventore exercitationem ipsa qui ut veniam voluptatibus quia architecto non!</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Produccion-->
+                        <div class="carousel-item bg-dark bg-gradient text-light" data-bs-interval="5000">
+                            <div class="d-inline-flex">
+                                <div class="qsomos_production">
+                                    <img src="../public/img/produccion.jpg" alt="Gerente de PRODUCCION">
+                                </div>
+                            
+                                <div class="qsomos_production_texto">
+                                    <h3>Gerente de CALIDAD</h3>
+                                    <p class="ps-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur maxime inventore exercitationem ipsa qui ut veniam voluptatibus quia architecto non!</p>
+                                </div>
+                            </div>
+
+                    </div>
+            </div>
+
         </main>
-        
-        <main class="qsomos_designer_texto">
 
-            <h3>Nuestro DISEÑADOR</h3>
+    
 
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur maxime inventore exercitationem ipsa qui ut veniam voluptatibus quia architecto non!</p>
+        <footer>
+            <!--Redes sociales-->
+            <div class="redes_sociales">
+                <a href="https://www.instagram.com/?hl=es" target="blank"><img src="../public/img/instagram_icon.png" alt="Instagram" /></a></h1>
+                <a a href="https://www.facebook.com/" target="blank"><img src="../public/img/facebook_icon.png" alt="facebook"></a>
+                <a href="https://www.gmail.com/" target="blank"><img src="../public/img/mail_icon.png" alt="Email">
+            </div>
 
-        </main>
-
-        <!--Calidad-->
-        <main class="qsomos_quality">
-            <img src="../public/img/thinker.jpg" alt="Supervisor de CALIDAD">
-        </main>
-        
-        <main class="qsomos_quality_texto">
-
-            <h3>Supervisor de CALIDAD</h3>
-
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur maxime inventore exercitationem ipsa qui ut veniam voluptatibus quia architecto non!</p>
-
-        </main>
-
-        <!--Produccion-->
-        <main class="qsomos_production">
-            <img src="../public/img/produccion.jpg" alt="Gerente de PRODUCCION">
-        </main>
-        
-        <main class="qsomos_production_texto">
-
-            <h3>Gerente de CALIDAD</h3>
-
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur maxime inventore exercitationem ipsa qui ut veniam voluptatibus quia architecto non!</p>
-
-        </main>
-
-        <!--Redes sociales-->
-        <footer class="redes_sociales">
-
-            <ul>
-                <li>
-                    <a href="https://www.instagram.com/?hl=es" target="blank"><img src="../public/img/1856379_circled_instagram_media_network_social_icon.png" alt="Instagram" /></a>
-                </li>
-
-                <li>
-                    <a a href="https://www.facebook.com/" target="blank"><img src="../public/img/107175_circle_facebook_icon.png" alt="facebook"></a>
-                </li>
-
-                <li>
-                    <a href="https://www.gmail.com/" target="blank"><img src="../public/img/1891029_cercle_email_envelope_letter_mail_icon.png" alt="Email"></a>
-                </li>
-            </ul>
+            <!--Pie de pagina-->
+            <div class="copy py-2">
+                <a href="www.mrthreepwood.com" target="blank">&#169; 2021 Mr.Threepwood</a>
+            </div>
 
         </footer>
-
-        <!--Pie de pagina-->
-        <footer class="copy">&#169; 2021 Mr.Threepwood</footer>
     
     </div>
+
+    <!--Js Scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 
 </body>
 
