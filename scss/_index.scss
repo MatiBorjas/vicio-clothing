@@ -1,0 +1,23 @@
+/*============*/
+/*   INDEX    */
+/*============*/
+
+.rem1 {
+    border: $img-border;
+    transition: all 0.3s ease-in-out;
+}
+
+.rem1:hover {
+    transform: scale(1.1,1.1);
+}
+
+.inicio_descripcion {
+    color:$light-font;
+    border-radius: 3px;
+    grid-area: text;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: $margin-t;
+    
+}

@@ -1,0 +1,63 @@
+/*=========================*/
+/*        LA MAGIA         */
+/*=========================*/
+
+#lamagia_grid{
+    display: grid;
+    grid-template-areas: 'head head head'
+                         'nav nav nav'
+                         'prod prod prod'
+                         'foot foot foot';
+    grid-template-columns: 20% 60% 20%;
+    row-gap: 5px;
+    justify-items: center;
+}
+
+.lamagia_texto{
+    display: flex;
+    flex-flow: $frow;
+    width: $prod-width;
+    background-color: black;
+    color:$light-font;
+    border-radius: 3px;
+    text-align: justify;
+    font-size: 20px;
+
+    a:link, a:visited, a:active {
+        text-decoration: none;
+        color:rgb(214, 108, 108);
+    }
+}
+
+.lamagia_ecuacion{
+    display: flex;
+    flex-flow: $frow;
+    justify-content: center;
+    font-family: $title-font;
+    font-size: 40px;
+    font-weight: 450+450;
+
+    p{
+        margin: 0px;
+        text-align: center;
+    }
+}
+
+.lamagia_resultado{
+    grid-area: res;
+    font-family: $title-font;
+    text-align: center;
+    font-size: 70px;
+    font-weight: 900;
+
+    p{
+        margin: 0px;
+    }
+
+    img{
+        width: 250px;
+        border: $img-border;  
+        margin-top: 15px;  
+        margin-bottom: 20px;
+    }
+}

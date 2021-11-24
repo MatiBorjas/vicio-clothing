@@ -1,0 +1,34 @@
+/*=========================*/
+/*      QUIENES SOMOS      */
+/*=========================*/
+
+#qsomos_grid{
+    display: grid;
+    grid-template-areas: 'head head head'
+                         'nav nav nav'
+                         'prod prod prod'
+                         'foot foot foot';
+    grid-template-columns: 20% 60% 20%;
+    row-gap: 5px;
+    justify-items: center;
+}
+
+#qsomos_carousel{
+    grid-area: prod;
+    width: $prod-width;
+}
+
+.qsomos_designer img{
+    border: $img-border;
+    width: 300px;
+}
+
+.qsomos_quality img{
+    border: $img-border;
+    width: 300px;
+}
+
+.qsomos_production img{
+    border: $img-border;
+    width: 300px;
+}

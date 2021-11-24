@@ -1,0 +1,50 @@
+//==========================//
+//=         VARIABLES       //
+//==========================//
+
+//*=================*//
+//*      FONTS      *//
+//*=================*//
+
+$title-font: 'Oswald', sans-serif;
+$general-font: 'Bai Jamjuree', sans-serif;
+$light-font: rgb(220, 220, 220);
+
+//*=================*//
+//*      SPACING    *//
+//*=================*//
+
+$zero: 0px 0px;
+$prod-width: 100% - 20%;
+$margin-t: 50px / 2;
+
+@for $i from 1 through 3 {
+    .padding#{$i} {
+        padding: 20px / $i;
+    }
+}
+
+//*=================*//
+//*      BORDER     *//
+//*=================*//
+
+$img-border: 4px solid rgb(34, 34, 34);
+
+//*=================*//
+//*      FLEXBOX    *//
+//*=================*//
+
+$frow: row nowrap;
+
+//*===================*//
+//*      ANIMATION    *//
+//*===================*//
+
+@mixin logo-animation {
+    animation-name: vicioc;
+    animation-duration: .5s;
+    animation-timing-function:linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    position: relative;
+}

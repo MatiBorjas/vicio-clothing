@@ -1,5 +1,0 @@
-1 - Navegador integramente de bootstrap modificado para armonizar con la paleta de colores
-
-2 - el fondo de la descripion fue modificado con una clase de gradiente
-
-3 - el padding del <!--pie de pagina--> fue modificado con bootstrap

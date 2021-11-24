@@ -1,0 +1,39 @@
+/*=========================*/
+/*   NUESTROS PRODUCTOS    */
+/*=========================*/
+
+#quehacemos_grid {
+    display: grid;
+    grid-template-areas: 'head head head'
+                         'nav nav nav'
+                         'prod prod prod'
+                         'foot foot foot';
+    grid-template-columns: 35% 30% 35%;
+    row-gap: 5px;
+    justify-items: center;
+}
+
+.quehacemos_remeras {
+    display: flex;
+    flex-flow: $frow;
+    justify-content: center;
+
+    img{
+        border: $img-border;
+        display: inline-block;
+        width: 250px;
+        margin: 0px 10px;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+.quehacemos_texto{
+    display: flex;
+    flex-flow: $frow;
+    width: $prod-width;
+    justify-content: end;
+    color:$light-font;
+    border-radius: 3px;
+    font-size: 20px;
+    text-align: justify;
+}
