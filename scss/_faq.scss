@@ -2,7 +2,7 @@
 /*      FAQ     */
 /*==============*/
 
-#faq_grid{
+/*#faq_grid{
     display: grid;
     grid-template-areas: 'head head head'
                          'nav nav nav'
@@ -10,19 +10,12 @@
                          'foot foot foot';
     grid-template-columns: 20% 60% 20%;
     row-gap: 5px;
-    justify-items: center;
-
-    @media screen and (max-width: 480px){
-            display: grid;
-            grid-template-areas: 'head head head'
-                                 'nav nav nav'
-                                 'prod prod prod'
-                                 'foot foot foot';
-            grid-template-columns: 5% 90% 5%;
-            row-gap: 2px;
-            justify-items: center;
-    }
-
+    justify-items: center;*/
+.grid {
+    @media screen and (max-width: 480px) {
+        grid-template-columns: 5% 90% 5%;
+        row-gap: 2px;
+        }
 }
 
 .preguntas_frecuentes{

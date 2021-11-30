@@ -22,6 +22,13 @@ body {
 /*============*/
 /*   GENERAL  */
 /*============*/
+.grid {
+  display: grid;
+  grid-template-areas: 'head head head' 'nav nav nav' 'prod prod prod' 'foot foot foot';
+  grid-template-columns: 20% 60% 20%;
+  row-gap: 5px;
+  justify-items: center; }
+
 header {
   grid-area: head; }
 
@@ -64,6 +71,12 @@ footer {
 
 .secondary img {
   width: 150px; }
+
+.rem1 {
+  border: 4px solid #222222;
+  transition: all 0.3s ease-in-out; }
+  .rem1:hover {
+    transform: scale(1.1, 1.1); }
 
 .encabezado {
   text-align: center; }
@@ -111,13 +124,6 @@ h3 {
 /*============*/
 /*   INDEX    */
 /*============*/
-.rem1 {
-  border: 4px solid #222222;
-  transition: all 0.3s ease-in-out; }
-
-.rem1:hover {
-  transform: scale(1.1, 1.1); }
-
 .inicio_descripcion {
   color: gainsboro;
   border-radius: 3px;
@@ -130,13 +136,6 @@ h3 {
 /*=========================*/
 /*   NUESTROS PRODUCTOS    */
 /*=========================*/
-#quehacemos_grid {
-  display: grid;
-  grid-template-areas: 'head head head' 'nav nav nav' 'prod prod prod' 'foot foot foot';
-  grid-template-columns: 35% 30% 35%;
-  row-gap: 5px;
-  justify-items: center; }
-
 .quehacemos_remeras {
   display: flex;
   flex-flow: row nowrap;
@@ -144,42 +143,37 @@ h3 {
   .quehacemos_remeras img {
     border: 4px solid #222222;
     display: inline-block;
-    width: 250px;
     margin: 0px 10px;
     transition: all 0.3s ease-in-out; }
 
 .quehacemos_texto {
-  display: flex;
-  flex-flow: row nowrap;
-  width: 80%;
-  justify-content: end;
+  /*display: flex;
+    flex-flow: $frow;*/
   color: gainsboro;
   border-radius: 3px;
   font-size: 20px;
-  text-align: justify; }
+  text-align: justify;
+  margin-bottom: 25px; }
 
 /*=========================*/
 /*        LA MAGIA         */
 /*=========================*/
-#lamagia_grid {
-  display: grid;
-  grid-template-areas: 'head head head' 'nav nav nav' 'prod prod prod' 'foot foot foot';
-  grid-template-columns: 20% 60% 20%;
-  row-gap: 5px;
-  justify-items: center; }
-
 .lamagia_texto {
   display: flex;
   flex-flow: row nowrap;
-  width: 80%;
   background-color: black;
   color: gainsboro;
   border-radius: 3px;
   text-align: justify;
-  font-size: 20px; }
+  font-size: 20px;
+  margin: 0px 50px; }
   .lamagia_texto a:link, .lamagia_texto a:visited, .lamagia_texto a:active {
     text-decoration: none;
     color: #d66c6c; }
+  @media screen and (max-width: 480px) {
+    .lamagia_texto {
+      font-size: 16px;
+      margin: 0px 25px; } }
 
 .lamagia_ecuacion {
   display: flex;
@@ -209,45 +203,43 @@ h3 {
 /*=========================*/
 /*      QUIENES SOMOS      */
 /*=========================*/
-#qsomos_grid {
-  display: grid;
-  grid-template-areas: 'head head head' 'nav nav nav' 'prod prod prod' 'foot foot foot';
-  grid-template-columns: 20% 60% 20%;
-  row-gap: 5px;
-  justify-items: center; }
-
 #qsomos_carousel {
   grid-area: prod;
   width: 80%; }
+  #qsomos_carousel img {
+    border: 4px solid #222222;
+    width: 300px; }
+  @media screen and (max-width: 680px) {
+    #qsomos_carousel {
+      display: none; } }
 
-.qsomos_designer img {
-  border: 4px solid #222222;
-  width: 300px; }
+#qsomos_cel {
+  grid-area: prod;
+  display: none; }
+  @media screen and (max-width: 680px) {
+    #qsomos_cel {
+      display: flex;
+      flex-flow: column nowrap; } }
 
-.qsomos_quality img {
-  border: 4px solid #222222;
-  width: 300px; }
-
-.qsomos_production img {
-  border: 4px solid #222222;
-  width: 300px; }
+.cel_qsomos img {
+  border: 4px solid #222222; }
 
 /*==============*/
 /*      FAQ     */
 /*==============*/
-#faq_grid {
-  display: grid;
-  grid-template-areas: 'head head head' 'nav nav nav' 'prod prod prod' 'foot foot foot';
-  grid-template-columns: 20% 60% 20%;
-  row-gap: 5px;
-  justify-items: center; }
-  @media screen and (max-width: 480px) {
-    #faq_grid {
-      display: grid;
-      grid-template-areas: 'head head head' 'nav nav nav' 'prod prod prod' 'foot foot foot';
-      grid-template-columns: 5% 90% 5%;
-      row-gap: 2px;
-      justify-items: center; } }
+/*#faq_grid{
+    display: grid;
+    grid-template-areas: 'head head head'
+                         'nav nav nav'
+                         'prod prod prod'
+                         'foot foot foot';
+    grid-template-columns: 20% 60% 20%;
+    row-gap: 5px;
+    justify-items: center;*/
+@media screen and (max-width: 480px) {
+  .grid {
+    grid-template-columns: 5% 90% 5%;
+    row-gap: 2px; } }
 
 .preguntas_frecuentes {
   display: flex;

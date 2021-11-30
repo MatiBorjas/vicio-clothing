@@ -17,6 +17,9 @@ $light-font: rgb(220, 220, 220);
 $zero: 0px 0px;
 $prod-width: 100% - 20%;
 $margin-t: 50px / 2;
+$margin-b: 50px / 2;
+$margin-x: 0px (25px * 2);
+$margin-x-cel: 0px (50px / 2);
 
 @for $i from 1 through 3 {
     .padding#{$i} {
@@ -35,6 +38,7 @@ $img-border: 4px solid rgb(34, 34, 34);
 //*=================*//
 
 $frow: row nowrap;
+$fcol: column nowrap;
 
 //*===================*//
 //*      ANIMATION    *//

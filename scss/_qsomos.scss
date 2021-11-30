@@ -2,33 +2,32 @@
 /*      QUIENES SOMOS      */
 /*=========================*/
 
-#qsomos_grid{
-    display: grid;
-    grid-template-areas: 'head head head'
-                         'nav nav nav'
-                         'prod prod prod'
-                         'foot foot foot';
-    grid-template-columns: 20% 60% 20%;
-    row-gap: 5px;
-    justify-items: center;
-}
-
-#qsomos_carousel{
+#qsomos_carousel {
     grid-area: prod;
     width: $prod-width;
+
+    img {
+        border: $img-border;
+        width: 300px;
+    }
+
+    @media screen and (max-width: 680px) {
+        display: none;
+    }
 }
 
-.qsomos_designer img{
-    border: $img-border;
-    width: 300px;
+#qsomos_cel {
+    grid-area: prod;
+    display: none;
+
+    @media screen and (max-width: 680px) {
+        display: flex;
+        flex-flow: $fcol;
+    }
 }
 
-.qsomos_quality img{
-    border: $img-border;
-    width: 300px;
-}
-
-.qsomos_production img{
-    border: $img-border;
-    width: 300px;
+.cel_qsomos {
+    img {
+        border: $img-border;
+    }
 }

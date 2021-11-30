@@ -2,30 +2,24 @@
 /*        LA MAGIA         */
 /*=========================*/
 
-#lamagia_grid{
-    display: grid;
-    grid-template-areas: 'head head head'
-                         'nav nav nav'
-                         'prod prod prod'
-                         'foot foot foot';
-    grid-template-columns: 20% 60% 20%;
-    row-gap: 5px;
-    justify-items: center;
-}
-
 .lamagia_texto{
     display: flex;
     flex-flow: $frow;
-    width: $prod-width;
     background-color: black;
     color:$light-font;
     border-radius: 3px;
     text-align: justify;
     font-size: 20px;
+    margin: $margin-x;
 
     a:link, a:visited, a:active {
         text-decoration: none;
         color:rgb(214, 108, 108);
+    }
+
+    @media screen and (max-width: 480px) {
+        font-size: 16px;
+        margin: $margin-x-cel;
     }
 }
 

@@ -16,6 +16,17 @@ body {
 /*   GENERAL  */
 /*============*/
 
+.grid {
+    display: grid;
+    grid-template-areas: 'head head head'
+                         'nav nav nav'
+                         'prod prod prod'
+                         'foot foot foot';
+    grid-template-columns: 20% 60% 20%;
+    row-gap: 5px;
+    justify-items: center;
+}
+
 header {
     grid-area: head;
 }
@@ -56,6 +67,17 @@ footer {
 
 .secondary img {
     width: 150px;
+}
+
+.rem1 {
+    border: $img-border;
+    transition: all 0.3s ease-in-out;
+
+
+    &:hover {
+        transform: scale(1.1,1.1);
+    }
+
 }
 
 .encabezado {
