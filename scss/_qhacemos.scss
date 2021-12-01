@@ -24,3 +24,13 @@
     text-align: justify;
     margin-bottom: $margin-b;
 }
+
+.form {
+    margin-top: $margin-t;
+
+    p{
+        color:rgb(220, 220, 220);
+        font-family: $title-font;
+        font-size: 50px;
+    }
+}
