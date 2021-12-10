@@ -40,6 +40,9 @@ main {
 nav {
   grid-area: nav; }
 
+.grid_nav {
+  width: 95%; }
+
 footer {
   grid-area: foot;
   width: 100%;
@@ -148,8 +151,6 @@ h3 {
     transition: all 0.3s ease-in-out; }
 
 .quehacemos_texto {
-  /*display: flex;
-    flex-flow: $frow;*/
   color: gainsboro;
   border-radius: 3px;
   font-size: 20px;
@@ -175,8 +176,7 @@ h3 {
   text-align: justify;
   font-size: 20px;
   margin: 0px 50px; }
-  .lamagia_texto a:link, .lamagia_texto a:visited, .lamagia_texto a:active {
-    text-decoration: none;
+  .lamagia_texto span {
     color: #d66c6c; }
   @media screen and (max-width: 480px) {
     .lamagia_texto {
@@ -235,15 +235,6 @@ h3 {
 /*==============*/
 /*      FAQ     */
 /*==============*/
-/*#faq_grid{
-    display: grid;
-    grid-template-areas: 'head head head'
-                         'nav nav nav'
-                         'prod prod prod'
-                         'foot foot foot';
-    grid-template-columns: 20% 60% 20%;
-    row-gap: 5px;
-    justify-items: center;*/
 @media screen and (max-width: 480px) {
   .grid {
     grid-template-columns: 5% 90% 5%;
