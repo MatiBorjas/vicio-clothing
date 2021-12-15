@@ -52,10 +52,15 @@ footer {
 }
 
 .logo {
+    
     display:flex;
     flex-flow: $frow;
     justify-content: center;
     margin-top: $margin-t;
+
+    img {
+        width: 300px;
+    }
 
     @include logo-animation;
 
@@ -122,6 +127,7 @@ h3 {
 
     img {
         margin: 0px 15px;
+        width: 35px;
     }
 }
 
